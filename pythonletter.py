@@ -1,13 +1,16 @@
+import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 qqMail = smtplib.SMTP_SSL("smtp.sina.com", 465)
-mailuser = "18305078225m@sina.cn"
-mailpass = "8631602956c57c6a"
-qqMail.login(mailuser,mailpass)
-sender = "18305078225m@sina.cn"
+mailuser = os.environ.get("SINA_MAIL_USER")
+mailpass = os.environ.get("SINA_MAIL_AUTH_CODE")
+if not mailuser or not mailpass:
+    raise SystemExit("请先设置 SINA_MAIL_USER 和 SINA_MAIL_AUTH_CODE 环境变量")
+qqMail.login(mailuser, mailpass)
+sender = mailuser
 recriver = "yequbiancheng@baicizhan.com"
 message = MIMEMultipart()
 message["Subject"] = Header("给夜曲的一封信--syl")
