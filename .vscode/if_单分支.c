@@ -5,7 +5,7 @@ int main(){
     printf("请输入一个数字：");
     scanf("%d",&csh);
     //判断
-    if (0 <= csh <= 100){
+    if (csh >= 1 && csh <= 100){
 
         printf("Right\n");//printf前的缩进在c语言中有无都行
     }

@@ -15,7 +15,7 @@ int main(){
     int x,y;
     printf("请输入一个整数：");
     scanf("%d,%d",&x,&y);
-    printf("x = %d,y = %d,x + y = %d",x,y);
+    printf("x = %d,y = %d,x + y = %d",x,y,x + y);
     //没想好
     double w;
     printf("请输入一个小数：");
