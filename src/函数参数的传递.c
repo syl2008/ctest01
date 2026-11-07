@@ -11,7 +11,7 @@ void swap1(int *x,int *y){//
     *x = *y;
     *y = temp;
 }
-void main(){
+int main(void){
     int a = 4,b = 2;
     swap(a,b);
     printf("a=%d,b=%d\n",a,b);

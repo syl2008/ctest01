@@ -8,7 +8,7 @@
   int get_num(int a,int b,int c){
     return sum(max(a,b),max(b,c));
   }
-void main(){
+int main(void){
     int a = 4, b = 5,c = 6;
     int csh1 = max(a,b);
     printf("%d\n",csh1);//普通调用

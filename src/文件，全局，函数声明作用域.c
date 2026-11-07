@@ -4,7 +4,7 @@ static int x = 10; // x 在整个文件中有效，但在其他文件中不可�
 void myFunction() {
     printf("函数内部: %d\n", x); // 可以访问文件作用域的变量 x
 }
-void main(){
+int main(void){
     myFunction(); // 调用 myFunction，打印 x 的值是可以的
     printf("函数外部: %d\n", x); // 可以访问文件作用域的变量 x 
 }
