@@ -1,3 +1,7 @@
-__pycache__/
+﻿__pycache__/
 *.py[cod]
+*.exe
+*.obj
+*.o
+*.exe.manifest
 .vscode/run.exe
